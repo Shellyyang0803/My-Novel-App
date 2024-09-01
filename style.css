@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+}
+
+section {
+    margin-top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+#novel-content-display {
+    white-space: pre-wrap;
+    line-height: 1.5;
+    margin-top: 20px;
+}
+
+#book-list h3, #book-list h4 {
+    margin: 10px 0 5px;
+}
