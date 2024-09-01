@@ -3,23 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小说应用</title>
     <link rel="stylesheet" href="style.css">
-    <title>陌柳拂影的书房</title>
 </head>
 <body>
     <header>
-        <h1 id="title">陌柳拂影的书房</h1>
+        <div id="language-switcher">
+            <button onclick="setLanguage('en')">English</button>
+            <button onclick="setLanguage('zh')">中文</button>
+        </div>
+        <h1 id="title">小说应用</h1>
     </header>
 
-    <section id="book-list">
-        <h2>书籍列表</h2>
-        <!-- 所有书籍列表将显示在这里 -->
+    <section id="novel-upload">
+        <h2>上传小说</h2>
+        <form id="novel-upload-form">
+            <input type="text" id="novel-title" placeholder="小说标题" required>
+            <textarea id="novel-content" placeholder="输入你的小说内容..." required></textarea>
+            <button type="button" id="uploadButton" onclick="uploadNovel()">上传</button>
+        </form>
     </section>
 
-    <section id="member-area">
-        <!-- 会员功能区域 -->
-        <h2>会员区</h2>
-        <div id="membership-status"></div>
+    <section id="novel-list">
+        <h2>小说列表</h2>
+        <!-- 小说列表将动态生成 -->
+    </section>
+
+    <section id="novel-reader" style="display: none;">
+        <h2 id="novel-title"></h2>
+        <div id="novel-content-display"></div>
+        <button onclick="listenToNovel()">听书</button>
+        <button onclick="backToList()">返回列表</button>
     </section>
 
     <script src="script.js"></script>
